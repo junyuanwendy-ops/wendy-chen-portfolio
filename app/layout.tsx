@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { Inter, IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
@@ -9,8 +9,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const newsreader = Newsreader({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });
@@ -35,7 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${newsreader.variable} ${plexMono.variable}`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${plexMono.variable}`}>
+        <div className="starfield" aria-hidden="true" />
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>

@@ -5,13 +5,16 @@ import {
   ClipboardCheck,
   Database,
   FileSpreadsheet,
+  FileText,
   Landmark,
   LineChart,
+  Mail,
   Network,
   PenLine,
   Scale,
   Sparkles,
 } from "lucide-react";
+import { LinkedinIcon } from "@/components/icons";
 
 export const profile = {
   name: "Junyuan (Wendy) Chen",
@@ -24,6 +27,32 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/wendy-chen0311",
   resumePath: "/Junyuan_Chen_Resume.pdf",
 };
+
+export const roles = [
+  "Accounting & Audit",
+  "Financial Modeling",
+  "Data & Analytics",
+  "Tax & Assurance",
+];
+
+export const socials = [
+  { label: "Email", href: "mailto:jycwendy0311@gmail.com", icon: Mail },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/wendy-chen0311", icon: LinkedinIcon },
+  { label: "Resume", href: "/Junyuan_Chen_Resume.pdf", icon: FileText },
+];
+
+export const hobbies = [
+  { label: "Pickleball", emoji: "🏓" },
+  { label: "Tennis", emoji: "🎾" },
+  { label: "Piano", emoji: "🎹" },
+  { label: "Music", emoji: "🎵" },
+];
+
+export const favoriteAlbums = [
+  { title: "The Romantics", artist: "Bruno Mars", emoji: "💿" },
+  { title: "24K Magic", artist: "Bruno Mars", emoji: "💿" },
+  { title: "An Evening with Silk Sonic", artist: "Silk Sonic", emoji: "💿" },
+];
 
 export const thinkingModes = [
   {
@@ -58,6 +87,7 @@ export const experience = [
     organization: "BDO USA",
     place: "San Jose, CA",
     date: "Jun 2026 - Sep 2026",
+    logo: "/logos/bdo.png",
     highlights: [
       "Analyze client financial data to support tax compliance and year-end filing projections.",
       "Research tax rules and client developments to identify reporting impacts.",
@@ -69,6 +99,7 @@ export const experience = [
     organization: "RRSS Human Resources, UCSD",
     place: "La Jolla, CA",
     date: "Sep 2025 - Present",
+    logo: "/logos/ucsd.png",
     highlights: [
       "Handle high-volume HR requests, assisting 100+ employees weekly.",
       "Support UCPath, Blink, UCRAYS, payroll, insurance, and financial-aid inquiries.",
@@ -80,6 +111,7 @@ export const experience = [
     organization: "Economics Research Lab, UCSD",
     place: "La Jolla, CA",
     date: "Sep 2025 - Jan 2026",
+    logo: "/logos/ucsd.png",
     highlights: [
       "Clean, merge, and validate large-scale mutual fund financial databases.",
       "Replicate empirical finance research results to evaluate benchmark alignment and performance dispersion.",
@@ -91,6 +123,7 @@ export const experience = [
     organization: "Amazon",
     place: "Bakersfield, CA",
     date: "Jun 2025 - Sep 2025",
+    logo: "/logos/amazon.svg",
     highlights: [
       "Led a cross-functional Quantity Stow process improvement initiative with a 30-person team.",
       "Increased throughput by 5%+ through workflow redesign, coaching, and station improvements.",
@@ -102,6 +135,7 @@ export const experience = [
     organization: "Intellisia Institute",
     place: "China",
     date: "Jun 2023 - Sep 2023",
+    logo: "/logos/intellisia.png",
     highlights: [
       "Analyzed AI B2B chatbot performance data and provided feedback on dialogue generation and UX.",
       "Supported a medical lecturer chatbot using facial modeling and voice synthesis from short videos.",
@@ -112,25 +146,18 @@ export const experience = [
 
 export const education = [
   {
-    school: "University of Southern California",
-    degree: "Master of Accounting (MAcc), Data & Analytics Track",
-    meta: "Expected June 2027",
-    place: "Los Angeles, CA",
-    coursework: ["IT Audit and Data Applications", "Business Analytics", "Financial Statement Analysis"],
-  },
-  {
     school: "University of California, San Diego",
     degree: "Economics and accounting/finance preparation",
     meta: "2024 - 2026",
     place: "San Diego, CA",
-    coursework: ["Research methods", "Accounting", "Finance"],
+    logo: "/logos/ucsd.png",
   },
   {
     school: "University of California, Davis",
     degree: "B.A. Economics; Minor in Accounting & Finance",
     meta: "2022 - 2024 · GPA 3.748",
     place: "Davis, CA",
-    coursework: ["Economics", "Accounting", "Finance"],
+    logo: "/logos/ucdavis.png",
   },
 ];
 
@@ -154,9 +181,20 @@ export const skills = {
 
 export const evidenceLinks = [
   {
+    title: "Amazon Quantity Stow automation",
+    discipline: "Automation",
+    icon: Sparkles,
+    company: { name: "Amazon", logo: "/logos/amazon.png" },
+    summary:
+      "Built Excel and macro-based automation for Amazon's Single-ASIN Quantity Stow operation: a staffing tool that auto-updates rosters from logins and an ETI macro that tracks associate performance (UPH) in real time. The tooling replaced manual tracking, flagged under-target performance, and standardized the process across shifts, with throughput averaging ~350-400 UPH against a 300 UPH target across 75,000+ units.",
+    artifacts: ["Excel macros", "Staffing tool", "ETI tracker", "350+ UPH"],
+    href: "/Amazon_Quantity_Stow_Wendy_Chen.pptx",
+  },
+  {
     title: "Celsius Holdings valuation work",
     discipline: "Financial modeling",
     icon: FileSpreadsheet,
+    company: { name: "Celsius Holdings", logo: "/logos/celsius.png" },
     summary:
       "DCF, comparable companies, precedent transactions, WACC, and LBO return logic for an investment banking course.",
     artifacts: ["DCF", "LBO", "WACC", "Comps"],
@@ -166,6 +204,7 @@ export const evidenceLinks = [
     title: "Qualcomm audit planning project",
     discipline: "Audit judgment",
     icon: Scale,
+    company: { name: "Qualcomm", logo: "/logos/qualcomm.png" },
     summary:
       "Risk assessment covering seasonality, equity price risk, foreign exchange risk, and substantive evidence planning.",
     artifacts: ["Risk", "Evidence", "Cutoff", "Valuation"],
@@ -175,6 +214,7 @@ export const evidenceLinks = [
     title: "Target / Maxoman analysis",
     discipline: "Cost accounting",
     icon: Calculator,
+    company: { name: "Target", logo: "/logos/target.png" },
     summary:
       "Financial and cost analysis of Target Corp for an M&A department training program with Excel deliverables.",
     artifacts: ["Ratios", "Margins", "Costs", "Excel"],
@@ -184,6 +224,7 @@ export const evidenceLinks = [
     title: "Storely seed financing",
     discipline: "Venture finance",
     icon: BriefcaseBusiness,
+    company: { name: "Storely", logo: null },
     summary:
       "Pitch and term sheet for a local peer-to-peer storage marketplace connecting hosts, students, and small businesses.",
     artifacts: ["Pitch", "Term Sheet", "$1M", "$5M Post"],
@@ -199,8 +240,7 @@ export const narrativeStats = [
 ];
 
 export const navItems = [
-  { label: "Profile", href: "#profile" },
   { label: "Experience", href: "#experience" },
-  { label: "Evidence", href: "#evidence" },
+  { label: "Projects", href: "#evidence" },
   { label: "Contact", href: "#contact" },
 ];
