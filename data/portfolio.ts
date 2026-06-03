@@ -167,11 +167,6 @@ export const leadership = [
     organization: "Beta Alpha Psi (BAP), UCSD",
     date: "Jan 2025 - Present",
   },
-  {
-    role: "Vice President",
-    organization: "Chinese Students and Scholars Association (CSSA), UC Davis",
-    date: "Jun 2023 - Sep 2023",
-  },
 ];
 
 export const skills = {
